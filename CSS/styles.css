@@ -1,0 +1,57 @@
+
+body { 
+	font-family: Arial, sans-serif; 
+	color: white;
+	background-image: url("../images/beach_img.jpg");
+}
+
+.img-center {
+	width: 30%;
+	height: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5%;
+}
+
+.centered { text-align: center; }
+
+a.centered { display: block; }
+
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+	color: black;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table tr:nth-child(odd) { 
+	background: #d8b8f3;
+}
+  
+table tr:nth-child(even){
+	background: #b16fe8;
+}
+
+table th {
+    background-color: #FFF;
+    border: solid 0px #DDEEEE;
+    padding: 5px;
+    text-align: center;
+        
+}
+table td {
+    border: solid 0px #DDEEEE;
+    padding: 5px;
+}
+
+ul {
+	color: white;
+	list-style-type: square;
+}
+
