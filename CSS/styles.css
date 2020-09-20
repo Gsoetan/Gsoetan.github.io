@@ -2,7 +2,7 @@
 body { 
 	font-family: Arial, sans-serif; 
 	color: white;
-	background-image: url("../images/beach_img.jpg");
+	background-image: url("../images/img1.jpg");
 }
 
 .img-center {
@@ -53,5 +53,14 @@ table td {
 ul {
 	color: white;
 	list-style-type: square;
+}
+
+.choicewords {
+	font-weight: bold;
+	color: red;
+}
+
+a:hover {
+	color: yellow;
 }
 
