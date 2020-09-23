@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Georgia State University embedded sytle sheets example
+	</title>
+	<link rel="stylesheet" href="./CSS/css_4_cw2.css">
+	<style>
+		body {
+			font-family: times new roman;
+			margin-left: 20%;
+			margin-right: 20%;
+			text-align: justify;
+			background: ivory; 
+			color: red;
+		}
+
+		p { text-indent: 2cm; }
+
+		p.e3-internal { 
+			text-indent: 2cm;
+			color: darkred;
+			margin-left: 6cm; 
+		}
+
+		h1.e3-internal {
+			color: red;
+			margin-left: 2cm;
+		}
+
+		h1, h2, h3 {
+			color: red;
+			margin-left: 2cm;
+		}
+
+		h2.e3-internal {
+			color: red;
+			margin-left: 4cm;
+		}
+
+		.e4-in {
+			background-color: chocolate;
+			margin: 0;
+			padding: 0;
+		}
+
+		.twelvept-in { font-size: 12pt; }
+		.fourteenpt-in { font-size: 14pt; }
+		.arial-in { font-family: arial; }
+
+		.treb-in {
+			font-family: Trebuchet MS;
+			color: gold;
+		}
+
+		.khaki-in { color: khaki; }
+		.artist-in { color: moccasin; }
+		.year-in { color: ivory }
+
+		.verse-in {
+			margin-left: 2cm;
+			margin-right: 2cm;
+		}
+
+		.chorus-in {
+			font-style: italic;
+			margin-left: 4cm;
+			margin-right: 4cm;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Exercise 1</h1>
+	<p style="text-indent: 2cm; color: darkred;">
+		This paragraph has been formatted using the in-line style command.
+	</p>
+	<p>
+		This paragraph has not been formatted using the in-line style command
+	</p>
+	<hr>
+
+	<h1>Exercise 2</h1>
+	<p>Problem in line 6: Missing " after "times new roman" and before the ";"</p>
+	<hr>
+
+	<h1>Exercise 3 Internal</h1>
+	<h1 class="e3-internal">h1 heading</h1>
+	<h2 class="e3-internal">h2 subheading</h2>
+	<p class="e3-internal">Paragraph 1</p>
+	<p class="e3-internal">Paragraph 2</p>
+	<h2 class="e3-internal">h2 subheading</h2>
+	<p class="e3-internal">Paragraph 1</p>
+
+	<h1>Exercise 3 External</h1>
+	<h1 class="e3-external">h1 heading</h1>
+	<h2 class="e3-external">h2 subheading</h2>
+	<p class="e3-external">Paragraph 1</p>
+	<p class="e3-external">Paragraph 2</p>
+	<h2 class="e3-external">h2 subheading</h2>
+	<p class="e3-external">Paragraph 1</p>
+	<hr>
+
+	<h1>Exercise 4</h1>
+	<h1 class="e4-in fourteenpt-in arial-in artist-in">Artist: Drake</h1>
+	<p class="e4-in fourteenpt-in arial-in khaki-in">Song Title: Hotline Bling</p>
+	<p class="e4-in twelvept-in arial-in khaki-in">Album: Views</p>
+	<h1 class="e4-in twelvept-in arial-in year-in">Year: 2016</h1>
+	<h1 class="e4-in fourteenpt-in treb-in verse-in">
+		Verse: Ever since I left the city, you
+		Got a reputation for yourself now
+		Everybody knows and I feel left out
+		Girl, you got me down, you got me stressed out
+		'Cause ever since I left the city, you
+		Started wearing less and goin' out more
+		Glasses of champagne out on the dance floor
+		Hangin' with some girls I've never seen before
+	</h1>
+	<h1 class="e4-in fourteenpt-in treb-in chorus-in">
+		Chorus: You used to call me on my cell phone
+		Late night when you need my love
+		Call me on my cell phone
+		Late night when you need my love
+		And I know when that hotline bling
+		That can only mean one thing
+		I know when that hotline bling
+		That can only mean one thing
+	</h1>
+
+	<h1>Exercise 5</h1>
+	<h1 class="e4-ext fourteenpt-ext arial-ext artist-ext">Artist: Drake</h1>
+	<p class="e4-ext fourteenpt-ext arial-ext khaki-ext">Song Title: Hotline Bling</p>
+	<p class="e4-ext twelvept-ext arial-ext khaki-ext">Album: Views</p>
+	<h1 class="e4-ext twelvept-ext arial-ext year-ext">Year: 2016</h1>
+	<h1 class="e4-ext fourteenpt-ext treb-ext verse-ext">
+		Verse: Ever since I left the city, you
+		Got a reputation for yourself now
+		Everybody knows and I feel left out
+		Girl, you got me down, you got me stressed out
+		'Cause ever since I left the city, you
+		Started wearing less and goin' out more
+		Glasses of champagne out on the dance floor
+		Hangin' with some girls I've never seen before
+	</h1>
+	<h1 class="e4-ext fourteenpt-ext treb-ext chorus-ext">
+		Chorus: You used to call me on my cell phone
+		Late night when you need my love
+		Call me on my cell phone
+		Late night when you need my love
+		And I know when that hotline bling
+		That can only mean one thing
+		I know when that hotline bling
+		That can only mean one thing
+	</h1>
+
+	<h1>Exercise 6</h1>
+	<p>
+		1) Best way to make this possible is by having multiple css style sheets for each department. Then for each teacher they will want to follow the style of the department page but could have some liberty into some minor aspects like format of exam times or time tables by using in-line styles
+	</p>
+	<p>
+		2) First we'll want to make the homepage which will be the basis for how all the other webpages will be formatted, so it's best to use and external css file that can be edited to make changes to all webpages if need. Then, for each department they can make another css file that follows the homepage but is slightly different for the sake of uniqueness. For each teacher's webpage they can either use internal style sheets or inline style sheets to achieve their goal. Or their department's external style sheet could have various different options for the same thing, so like having multiple css classes for making a table. This is better because the teachers won't have the full liberty in making their webpage drastically different from the school's/department's structure, but it allows them some freedom to make it their own and adding what works for them. It's basically giving them a set of options to choose from. 
+	</p>
+	<p>
+		3) Possible HTML tags and style classes:
+		<ul>
+			<li>HTML Tags
+				<ul>
+					<li>Table</li>
+					<li>ol and ul</li>
+					<li>Links (a)</li>
+					<li>img</li>
+					<li>div</li>
+					<li>h1</li>
+					<li>h2</li>
+					<li>p</li>
+				</ul>
+			</li>
+			<li> Style Classes
+				<ul>
+					<li>tables</li>
+					<li>body</li>
+					<li>font/text</li>
+					<li>links</li>
+					<li>list</li>
+				</ul>
+			</li>
+		</ul>
+	</p>
+	<p>4) Possible CSS code for styling:</p>
+	<pre>
+
+		body {
+			background-image: url('');
+			background-color: black;
+			color: white; 
+		}
+
+		table {
+			border-collapse: collapse;
+			color: red;
+		}
+
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.text {
+			font: normal 14pt arial;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		a:hover {
+			color: yellow;
+		}
+
+		ul {
+			color: purple;
+			list-style-type: square;
+		}
+
+
+	</pre>
+
+
+</body>
+</html>

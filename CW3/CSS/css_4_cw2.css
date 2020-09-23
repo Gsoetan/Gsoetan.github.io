@@ -1,0 +1,45 @@
+h1.e3-external {
+	color: red;
+	margin-left: 2cm;
+}
+
+h2.e3-external {
+	color: red;
+	margin-left: 4cm;
+}
+
+p.e3-external {
+	text-indent: 2cm;
+	color: darkred;
+	margin-left: 6cm;
+}
+
+.e4-ext {
+	background-color: chocolate;
+	margin: 0;
+	padding: 0;
+}
+
+.twelvept-ext { font-size: 12pt; }
+.fourteenpt-ext { font-size: 14pt; }
+.arial-ext { font-family: arial; }
+
+.treb-ext {
+	font-family: Trebuchet MS;
+	color: gold;
+}
+
+.khaki-ext { color: khaki; }
+.artist-ext { color: moccasin; }
+.year-ext { color: ivory }
+
+.verse-ext {
+	margin-left: 2cm;
+	margin-right: 2cm;
+}
+
+.chorus-ext {
+	font-style: italic;
+	margin-left: 4cm;
+	margin-right: 4cm;
+}
