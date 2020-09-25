@@ -1,0 +1,38 @@
+.center {
+	text-align: center;
+}
+
+.main {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.column-layout {
+	padding: 2em;
+	margin: 2em;
+	border: dashed red;
+}
+
+.left-column {
+	flex-basis: 33%;
+}
+
+.right-column {
+	flex-basis: 67%;
+}
+
+.img {
+	float: right;
+	width: 200px;
+}
+
+.un-wrap {
+	clear: both;
+}
+
+.position-fixed {
+	position: fixed;
+	bottom: 5px;
+}
