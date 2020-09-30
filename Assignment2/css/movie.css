@@ -1,0 +1,146 @@
+/* George Soetan / Class 2 / Movie review css */
+body {
+	background-image: url("../images/background.png");
+	margin: 0;
+}
+
+.text {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 8pt;
+}
+
+#review-percentage {
+ font-size: 48pt;
+ font-weight: bold;
+ color: red;
+}
+
+#review-num { color: white; }
+
+#banner-wrapper { position: relative; }
+
+.banner { height: 50px; }
+
+#banner-layer1, #banner-layer2 {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#banner-layer1 {
+  	z-index: 1;
+  	text-align: center;
+}
+#banner-layer2 {
+	background-image: url("../images/bannerbackground.png");
+	background-repeat: repeat-x;
+}
+
+#movie-name {
+	font-size: 24pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+#main-content{
+	border: 4px gray solid;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#review-header-background, #review-header-foreground {
+	height: 83px;
+	width: 550px;
+}
+
+#review-header-background {
+	background-image: url("../images/rottenbackground.png");
+	background-repeat: repeat-x;
+}
+
+#review-header-foreground {
+	display: flex;
+	z-index: 1;
+	align-items: center;
+}
+
+#rating {
+	display: flex;
+	align-items: baseline;
+}
+
+.main {
+	width: 550px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.general {
+	font-family: Arial, sans-serif;
+	font-size: 8pt;
+	width: 250px;
+	background-color: #A2B964;
+	padding-bottom: 1px;
+}
+
+#left-column { flex-basis: 47%; }
+
+#right-column { flex-basis: 47%; }
+
+.column-layout {
+	padding: 0em;
+	margin: 1%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.review {
+	display: flex;
+	font-weight: bold;
+	border: 2px gray solid;
+	background-color: #E1D697;
+	flex-wrap: wrap;
+}
+
+.review-text { margin: 8px; }
+.icons {
+	margin-right: 5px;
+	float: left;
+}
+
+.reviewer { margin-bottom: 3em; }
+.reviewer-occupation {
+	margin-top: 0;
+	font-style: italic;
+}
+
+.reviewer-text { margin-bottom: 0; }
+
+dt {
+	margin-top: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+dl { margin: 10px; }
+
+.footer {
+	background-color: #A2B964;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+
+#w3c {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	bottom: 2px;
+	right: 2px;
+}
