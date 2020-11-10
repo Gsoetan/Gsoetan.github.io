@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript CW7</title>
+	<script>
+		function changeColors(background, text){
+			document.bgColor = background;
+			document.fgColor = text;
+		}
+	</script>
+</head>
+<body>
+	<p>Exercise 1</p>
+	<script>
+		var num = 0;
+		var num_next = 1;
+		for (var i = 0; i < 10; i++){
+			document.write(num + ", ");
+			var temp = num + num_next;
+			num = num_next;
+			num_next = temp;
+		}
+		document.write("...");
+	</script>
+
+	<p>Exercise 2</p>
+	<script>
+		for (var i = 0; i < 5; i++){
+			for (var j = i+1; j > 0; j--){
+				document.write("*");
+			}
+			document.write("<br>");
+		}
+	</script>
+
+	<p>Exercise 3</p>
+	<script>
+		var myArray = [3,8,7,6,5,-4,3,2,1];
+		document.write("Before: " + myArray.valueOf() + "<br>");
+		for (var i = 0; i < myArray.length; i++){
+			for (var j = i+1; j < myArray.length; j++){
+				if (myArray[i] > myArray[j]){
+					var temp = myArray[i];
+					myArray[i] = myArray[j];
+					myArray[j] = temp;
+				}
+			}
+		}
+		document.write("After: " + myArray.valueOf());
+	</script>
+
+	<p>Exercise 4</p>
+	<script>
+		var item;
+		var max_count = 1;
+		var myArray = [3,'a','a','a',2,3,'a',3,'a',2,4,9,3];
+		document.write("Array: " + myArray.valueOf() + "<br>");
+		for(var i = 0; i < myArray.length; i++){
+			var count = 0;
+			for (var j = i; j < myArray.length; j++){
+				if (myArray[i] == myArray[j]) { count++; }
+				if (count > max_count) { 
+					item = myArray[i]; 
+					max_count = count;
+				}
+			}
+		}
+		document.write(item + " ( " + max_count + " times)");
+	</script>
+
+	<p>Exercise 5</p>
+	<script>
+		var myArray = [5,32,3,21,56,8];
+		document.write("Before: " + myArray.valueOf() + "<br>");
+		var length = myArray.length;
+		for (var i = length - 1; i > 0; i--){
+			var rand_index = Math.floor(Math.random() * length);
+
+			var temp = myArray[i];
+			myArray[i] = myArray[rand_index];
+			myArray[rand_index] = temp;
+		}
+		document.write("After: " + myArray.valueOf());
+	</script>
+
+	<p>Exercise 6</p>
+	<script>
+		var back_color = prompt("Background color?", "black");
+		var text_color = prompt("Text color?", "white");
+		changeColors(back_color, text_color);
+		document.write("Text color: " + text_color + "<br>Background color: " + back_color);
+	</script>
+
+</body>
+</html>
