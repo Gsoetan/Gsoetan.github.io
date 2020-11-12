@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CW8 Form</title>
+	
+	<style type="text/css">
+		fieldset strong,
+		ul strong,
+		fieldset label.left,
+		fieldset .column {
+    		float: left;
+    		width: 5.5em;
+    		font-weight: normal;
+		}
+		fieldset { border-width: 0px; }
+		.error {
+		    color: red;
+		    font-size: 90%;
+		    text-decoration: underline;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function printError(elemId, hintMsg) {
+		    document.getElementById(elemId).innerHTML = hintMsg;
+		}
+
+		function validate(){
+			var id = document.signon.ID.value;
+		    var firstName = document.signon.Firstname.value;
+		    var lastName = document.signon.Lastname.value;
+		    var errors = [];
+
+		    var id_err = first_err = last_err = true;
+
+		    if (!checkLength(id)) { 
+		    	printError("id_err", "Please enter an ID"); 
+		    	errors.push("ID"); 
+		    } else { 
+		    	printError("id_err", "");
+		    	id_err = false; 
+		    }
+		 
+		    if (!checkLength(firstName)) { 
+		    	printError("first_err", "Please enter a first name"); 
+		    	errors.push("FirstName"); 
+		    } else { 
+		    	printError("first_err", "");
+		    	first_err = false;
+		    }
+		 
+		    if (!checkLength(lastName)) { 
+		    	printError("last_err", "Please enter a last name"); 
+		    	errors.push("LastName"); 
+		    } else { 
+		    	printError("last_err", "");
+		    	last_err = false;
+		    }
+
+		    if((id_err || first_err || last_err) == true) { 
+		    	if (errors.length > 0) {
+		    		document.getElementById("results").innerHTML = ""; 
+		    		reportErrors(errors);
+		    		return false;
+		    	}
+		    } 
+		    else { 
+		    	var success_message = "UserID: " + id + "<br>" +
+		    						  "First Name: " + firstName + "<br>" +
+		    						  "Last Name: " + lastName + "<br>";
+		    	document.getElementById("results").innerHTML = success_message;
+		    	document.getElementById("signon").reset();
+		    }
+		    return false;
+		}
+
+		function checkLength(text){
+		    min = 1;
+		    max = 10000;
+		 
+		    if (text.length < min || text.length > max) { return false; }
+		    return true;
+		}
+
+		function reportErrors(errors){
+		    var msg = "You forgot to fill in the following field(s). ";
+
+		    for (var i = 0; i < errors.length; i++) { msg += errors[i] + ", "; }
+
+		    var last_occ = msg.lastIndexOf(",");
+		    var formatted_msg = msg.substring(0, last_occ);
+		    alert(formatted_msg);
+		}
+	</script>
+</head>
+<body>
+	<h1>JavaScript Sign-up</h1>
+	<form id="signon" name="signon" method="POST" onsubmit="return validate();">
+		<fieldset class="column">
+			<p>
+				<strong>ID:</strong>
+				<div class="error" id="id_err"></div>
+				<input type="text" name="ID" size="16">
+			</p>
+			<p>
+				<strong>FirstName:</strong>
+				<div class="error" id="first_err"></div>
+				<input type="text" name="Firstname" size="16">
+			</p>
+			<p>
+				<strong>LastName:</strong>
+				<div class="error" id="last_err"></div>
+				<input type="text" name="Lastname" size="16">
+			</p>
+			<p>
+				<strong style="visibility: hidden;">space</strong>
+				<input type="submit" value="Add">
+			</p>
+
+			<p id="results"></p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
