@@ -9,7 +9,7 @@ function getInputs() {
 	var hours_worked = 0;
 	var company_total_pay = 0;
 	while(hours_worked != -1){
-		hours_worked = prompt("How many hours?");
+		hours_worked = prompt("How many hours? (enter -1 when done)");
 		if (hours_worked == -1) { break; }
 		num_of_employees++;
 		var total_pay = 0;
