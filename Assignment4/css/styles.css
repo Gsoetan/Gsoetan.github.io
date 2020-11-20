@@ -1,0 +1,159 @@
+body {
+	margin: 20px 0;
+	background: white;
+}
+
+fieldset {
+    background: lightgrey;
+    width: 350px;
+    border: 2px outset gray;
+    border-radius: 10px;
+    margin: auto;
+}
+
+input[type="button"] {
+  background-color: #fcba03;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+input[type="button"]{
+   font-family: Arial, sans-serif;
+   font-size: 100%;
+   display: inline-block;
+   padding: 10px 30px 10px;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   background-color: #fcba03;
+   border-radius: 15px;
+   box-shadow: 0 5px #999;
+
+}
+
+input[type="button"]:hover {
+  background-color: #bf8d00;
+  color: white;
+}
+
+input[type="button"]:active {
+    background: #5a77ad;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.button{
+   font-family: Arial, sans-serif;
+   font-size: 100%;
+   display: inline-block;
+   padding: 10px 30px 10px;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   background-color: #fcba03;
+   border-radius: 15px;
+   box-shadow: 0 5px #999;
+}
+
+.button:hover {
+  background-color: #bf8d00;
+  color: white;
+}
+
+.button:active {
+    background: #5a77ad;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+fieldset strong,
+ul strong,
+fieldset label.left,
+fieldset .column {
+	float: left;
+	width: 5.5em;
+	font-weight: normal;
+}
+
+fieldset { border-width: 0px; }
+
+.error {
+    color: red;
+    font-size: 90%;
+    text-decoration: underline;
+}
+
+.grid_layout {
+	max-width: 750px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cardEasy,
+.cardMedium,
+.cardHard {
+	position: relative;
+	transition: all .2s linear;
+	transform-style: preserve-3d;
+	margin: 5px;
+}
+
+.cardEasy {
+	animation: fadeIn ease 3s;
+}
+.cardMedium {
+	animation: fadeIn ease 5s;
+}
+.cardHard {
+	animation: fadeIn ease 8s;
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+.winner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cardEasy,
+.cardMedium,
+.cardHard,
+.background,
+.foreground {
+	height: 150px;
+	width: 150px;
+}
+
+.background,
+.foreground {
+	position: absolute;
+}
+
+.foreground {
+	background: grey url('../photos/question-mark.jpg');
+	background-size: contain;
+	background-position: center center;
+}
+
+.background {
+	transform: rotateY(180deg);
+	background-size: contain;
+	background-position: center center;
+}
+
+.selected {
+	transform: rotateY(180deg);
+	background-color: white;
+}
+
+
+.match .foreground {
+	background: white;
+}
+

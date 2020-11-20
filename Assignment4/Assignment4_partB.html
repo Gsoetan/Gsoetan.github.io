@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Guessing Game</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<h1 style="text-align: center;">JavaScript Guessing Game</h1>
+	<script src="javascript.js"></script>
+	<script type="text/javascript">
+		window.onload = function () { startGuessingGame(); start_timing("timer",deadline); }; // start the game when the page first loads
+		const correct_sound = new sound("sounds/right.wav");
+		const wrong_sound = new sound("sounds/wrong.wav");
+		const timer_for = 1.5;
+		var current_time = Date.parse(new Date());
+		var deadline = new Date(current_time + timer_for*60*1000);
+	</script>
+	<p id="timer" style="text-align: center; font-weight: bold;"></p>
+	<form id="signon" name="form" method="POST">
+		<fieldset class="column">
+			<p>
+				<strong>Guess:</strong>
+				<div class="error" id="guess_err"></div>
+				<input type="number" name="guess" size="16">
+			</p>
+
+			<p>
+				<strong style="visibility: hidden;">space</strong>
+				<input type="button" value="Submit Guess" onclick="checkGuess(guess.value);">
+			</p>
+		</fieldset>
+
+		<p id="let_me_go_pls" style="visibility: hidden; text-align: center;">
+			<a href="Assignment4_partC.html" class="button">Go to part C</a>
+		</p>
+</form>
+</body>
+</html>

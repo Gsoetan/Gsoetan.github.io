@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Matching Game</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<script type="text/javascript">
+		window.onload = function () { document.getElementById("winner").style.visibility = "hidden"; };
+	</script>
+	<h1 style="text-align: center;">Matching Game</h1>
+	<form id="signon" name="form" method="POST">
+		<fieldset class="column">
+			<p>
+				<strong>Difficulty:</strong>
+				<input type="radio" name="Difficulty" value="easy"> Easy
+				<input type="radio" name="Difficulty" value="moderate"> Moderate
+				<input type="radio" name="Difficulty" value="hard"> Hard
+			</p>
+			<p>
+				<strong style="visibility: hidden;">space</strong>
+				<input type="button" name="start" value="Begin" onclick="startMatchingGame(Difficulty.value)">
+			</p>
+		</fieldset>
+	</form>
+
+	<h2 id="timer" style="text-align: center;"></h2>
+	<h2 id="results" style="text-align: center;"></h2>
+
+	<div id="game"></div>
+	<script src="javascript_match.js"></script>
+
+	<div id="instructions">
+		<p>
+			*Instructions: *
+		</p>
+		<p>
+			Choose the difficulty of the game and click the "begin" button to start game. When the game is started you are given a couple of seconds to see the images and then you are free to begin. When the timer starts counting down you are to find the matches by clicking on each question-mark image. The goal is to match all images. When the game is done, you are free to choose another difficulty and begin again.
+		</p>
+		<p>
+			Disclaimer: Wait until each game is either completed or timer runs out before starting another game difficulty.
+		</p>
+	</div>
+	<img src="photos/trophy.jpeg" class="winner" id="winner">
+</body>
+</html>
