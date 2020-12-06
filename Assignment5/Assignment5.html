@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5</title>
+	<meta charset="utf-8" />
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/react.min.js"></script>
+	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/react-dom.min.js"></script>
+	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/babel.min.js"></script>
+	<style type="text/css">
+		dt {
+			font-size: 20px;
+		}
+
+		dl {
+			margin: 1em;
+			margin-bottom: .1em;
+		}
+
+		dd {
+			font-size: 16px;
+		}
+
+		#root div {
+			font-family: Arial, sans-serif;
+			color: red;
+		}
+
+		#root2 div {
+			font-family: Lucida console, Monospace;
+			color: blue;
+		}
+	</style>
+</head>
+	
+<body>
+	<h1>Customer Set 1</h1>
+	<div id="root"></div>
+	<h1>Customer Set 2</h1>
+	<div id="root2"></div>
+	<script type="text/babel" charset="utf-8">
+		class DisplayCustomer extends React.Component {
+			render() {
+				return <div><dl>
+				<dt><b>Customer {this.props.id} Details:</b></dt>
+				<dd><b>First Name: </b> {this.props.fname}</dd>
+				<dd><b>Last Name: </b> {this.props.lname}</dd>
+				<dd><b>Email: </b> {this.props.email}</dd>
+				<dd><DisplayAddress address={this.props.address}/></dd>
+				</dl>
+				<br/></div>;
+			}
+		}
+
+		class DisplayAddress extends React.Component {
+			render(){
+				return <div><b>Address </b>
+					<b>Street: </b> {this.props.address.street}<br/>
+					<b>City: </b> {this.props.address.city}<br/>
+					<b>Zip Code: </b> {this.props.address.zip}<br/>
+					</div>
+			}
+		}
+
+		var address1 = {
+			street: "Spice Wood Springs",
+			city: "Los Angeles",
+			zip: "12345"
+		};
+
+		var address2 = {
+			street: "Mira beach Blvd",
+			city: "Florida",
+			zip: "24543"
+		};
+
+		var address3 = {
+			street: "Georgia Peachtree Street",
+			city: "Atlanta",
+			zip: "51532"
+		};
+
+		var address4 = {
+			street: "95th Street",
+			city: "New York City",
+			zip: "48716"
+		};
+
+		ReactDOM.render(<div>
+			<DisplayCustomer id="1" fname="John" lname="Stamos" email="john@gmail.com" address={address1}/>
+			<DisplayCustomer id="2" fname="Bob" lname="Burgers" email="bob@yahoo.com" address={address2}/>
+			</div>,document.getElementById("root"));
+
+		ReactDOM.render(<div>
+			<DisplayCustomer id="3" fname="Sarah" lname="Connor" email="sarah@aol.com" address={address3}/>
+			<DisplayCustomer id="4" fname="Freki" lname="Loki" email="freki@charter.com" address={address4}/>
+			</div>,document.getElementById("root2"));
+	</script>
+</body>
+
+</html>
+
