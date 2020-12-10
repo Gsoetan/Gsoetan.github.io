@@ -6,12 +6,10 @@
 	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/react.min.js"></script>
-	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/react-dom.min.js"></script>
-	<script src="https://codd.cs.gsu.edu/~maljubori1/WP/scripts/babel.min.js"></script>
 	<style type="text/css">
 		dt {
 			font-size: 20px;
+			font-weight: bold;
 		}
 
 		dl {
@@ -21,6 +19,15 @@
 
 		dd {
 			font-size: 16px;
+		}
+
+		#root2 b {
+			font-weight: normal;
+		}
+
+		#root2 dd {
+			font-size: 16px;
+			font-weight: bold;
 		}
 
 		#root div {
@@ -44,7 +51,7 @@
 		class DisplayCustomer extends React.Component {
 			render() {
 				return <div><dl>
-				<dt><b>Customer {this.props.id} Details:</b></dt>
+				<dt>Customer {this.props.id} Details:</dt>
 				<dd><b>First Name: </b> {this.props.fname}</dd>
 				<dd><b>Last Name: </b> {this.props.lname}</dd>
 				<dd><b>Email: </b> {this.props.email}</dd>
